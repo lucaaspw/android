@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(140, 0, 255)!important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.android{
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: animate 2s linear infinite alternate;
+}
+
+.topo{
+    display: flex;
+    justify-content: center;
+}
+.antena-left{
+    width: 10px;
+    height: 80px;
+    margin-top: 20px;
+    background: #a5c63b;
+    border-radius: 30px;
+    transform: rotate(150deg);
+}
+.antena-right{
+    width: 10px;
+    height: 80px;
+    margin: 20px 0;
+    background: #a5c63b;
+    border-radius: 30px;
+    transform: rotate(30deg);
+}
+.cabeca-android{
+    width: 300px;
+    background: #a5c63b;
+    height: 154px;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    animation: cabeca 2s linear infinite alternate;
+
+}
+.cabeca-android .olhos{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+.cabeca-android .esquerdo{
+    animation: piscar 2s linear infinite alternate;
+}
+.android .corpo{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.android .corpo .braco-direito{
+    width: 50px;
+    height: 200px;
+    border-radius: 30px;
+    background: #a5c63b;
+}
+.android .corpo .braco-esquerdo{
+    width: 50px;
+    height: 200px;
+    border-radius: 30px;
+    background: #a5c63b;
+}
+.android .corpo .tronco{
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px 0 10px;
+    border-radius: 0 0 20% 20%;
+    background: #a5c63b;
+}
+.android .quadril{
+    display: flex;
+}
+.android .pernas{
+    width: 80px;
+    margin-top: -30px;
+    height: 180px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background: #a5c63b;
+    border-radius: 30px;
+}
+.sombra{
+    width: 300px;
+    height: 40px;
+    position: fixed;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 100%;
+    bottom: 20px;
+    backdrop-filter: blur(0px);
+    animation: sombra 2s linear infinite alternate;
+}
+@keyframes animate{
+    to{
+        margin-top: 0px;
+    }
+    from{
+        margin-top: 50px;
+    }
+}
+@keyframes sombra{
+    to{
+        width: calc(25% - 100px);
+        
+    }
+    from{
+        width: calc(10% - 10px);
+        background: rgba(0, 0, 0, .6);
+    }
+}
+@keyframes piscar{
+    to{
+        transform: rotateX(0deg);
+    }
+    from{
+        transform: rotateX(80deg);
+    }
+}
+@keyframes cabeca{
+    to{
+        transform: rotate(3deg);
+    }
+    from{
+        transform: rotate(0deg);
+    }
+}
