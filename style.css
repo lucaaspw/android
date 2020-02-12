@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: rgb(140, 0, 255)!important;
+    background: linear-gradient(rgb(140, 0, 255), rgb(255, 255, 255)) !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -103,6 +103,7 @@ body{
     background: rgba(0, 0, 0, .2);
     border-radius: 100%;
     bottom: 20px;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, .8) ;
     backdrop-filter: blur(0px);
     animation: sombra 2s linear infinite alternate;
 }
@@ -120,7 +121,7 @@ body{
         
     }
     from{
-        width: calc(10% - 10px);
+        width: calc(15% - 10px);
         background: rgba(0, 0, 0, .6);
     }
 }
